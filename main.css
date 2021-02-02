@@ -1,6 +1,7 @@
 :root {
   --subtle-gray: #f1f1f1;
   --border-gray: #dfdfdf;
+  --link-blue: #326891;
 }
 
 body {
@@ -12,6 +13,8 @@ hr {
   width: 100%;
   color: var(--border-gray);
   border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 p,
@@ -33,7 +36,7 @@ a:hover {
 }
 
 p > a {
-  color: #326891;
+  color: var(--link-blue);
   text-decoration: underline;
 }
 
@@ -312,4 +315,123 @@ iframe {
 
 .content-bottom button {
   width: 50%;
+}
+
+/* Footer */
+
+footer {
+  margin: 2vh 6%;
+}
+
+.footer-hr {
+  border-top: 2px solid var(--border-gray);
+  border-bottom: 1px solid var(--border-gray);
+  border-left: 0;
+  border-right: 0;
+  height: 1px;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) auto;
+  grid-gap: 2vh;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.logo-footer {
+  grid-column: 1 / -2;
+  width: 12em;
+  padding-bottom: 1vh;
+}
+
+.footer-link-small {
+  color: var(--link-blue);
+  font-size: 11px;
+  align-self: end;
+  justify-self: end;
+}
+
+.footer-nav ul, .footer-nav li {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5vh;
+}
+
+.list-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.footer-nav li {
+  list-style-type: none;
+  margin-bottom: 0.5vh;
+}
+
+.footer-nav li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-column-special {
+  border-left: 1px solid var(--border-gray);
+  padding-left: 1vw;
+}
+
+.footer-nav .li-special {
+  margin-bottom: 1.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav ion-icon,
+.footer-nav i,
+.footer-nav li.li-special {
+  font-size: 15px;
+  font-weight: 900;
+  margin-right: 0.6vw;
+}
+
+.li-special img {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.6vw;
+}
+
+.footer-nav .li-small {
+  font-size: 11px;
+}
+
+.footer-info {
+  margin-top: 1vh;
+  text-align: center;
+}
+
+.footer-info * {
+  color: gray;
+  font-size: 11px;
+}
+
+.footer-info div:hover, .footer-info li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer-info ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 1vh;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+}
+
+.footer-info li {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
 }
