@@ -89,9 +89,11 @@ header {
   align-items: center;
   padding: 5px 14px;
   border-bottom: 1px solid var(--border-gray);
+  box-shadow: rgb(0 0 0 / 8%) 0 0 5px 1px;
   margin-bottom: 5vh;
   position: sticky;
   top: 0;
+  z-index: 1;
   background: #fff;
 }
 
@@ -126,7 +128,7 @@ header .logo {
 
 main {
   display: grid;
-  width: 70%;
+  width: 72%;
   margin: 1vh auto;
   grid-template-columns: 16% 1fr 16%;
   grid-gap: 2vh;
@@ -143,6 +145,7 @@ main > * {
 
 .content-wide {
   grid-column: 1 / 4;
+  margin-bottom: 3vh;
 }
 
 main h1 {
@@ -150,9 +153,11 @@ main h1 {
   font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.9375rem;
-  line-height: 2.25rem;
-  margin: 1vh 0;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin: 0;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid var(--border-gray);
 }
 
 .social-icons {
@@ -225,7 +230,7 @@ main p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 20px;
+  column-gap: 20px;
 }
 
 .diagram-container img {
@@ -233,11 +238,24 @@ main p {
   grid-row: 1 / -1;
 }
 
+.theory-of-inflation {
+  margin: 3vh 0;
+}
+
+.theory-of-inflation h2 {
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-family: nyt-cheltenham,georgia,times new roman,times,serif;
+}
+
 .theory-of-inflation p, .theory-of-inflation span {
   font-family: nyt-franklin,arial,helvetica,sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   font-weight: 300;
+  color: #313131;
 }
 
 .theory-of-inflation span {
@@ -350,6 +368,10 @@ footer {
   font-size: 11px;
   align-self: end;
   justify-self: end;
+}
+
+.footer-link-small:hover {
+  text-decoration: none;
 }
 
 .footer-nav ul, .footer-nav li {
